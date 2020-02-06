@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  test:
     docker:
       # specify the version you desire here
       - image: circleci/node:13.7
@@ -26,3 +26,28 @@ jobs:
 
       # run tests!
       - run: yarn test
+
+  deploy:
+    steps:
+      - attach_workspace:
+        at: ~/repo
+      - run:
+        name: Authenticate with repo
+        command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run:
+        name: Publish package
+        command: yarn publish --minor
+
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - test
+      - deploy:
+        requires:
+          - test
+        filters:
+          tags:
+            only: /^v.*/
+          branches:
+            ignore: /.*/
