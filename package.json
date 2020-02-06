@@ -1,6 +1,6 @@
 {
   "name": "@softwaregardeners/trowel",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Small javascript library with a light focus on functional programming",
   "author": "Brice Carpentier <brice@daknet.org>",
   "license": "MIT",
