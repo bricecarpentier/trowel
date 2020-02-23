@@ -6,10 +6,10 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    ".": "./index.js",
-    "./pipe": "./functional/pipe.js",
-    "./tap": "./functional/tap.js",
-    "./sleep": "./promises/sleep.js"
+    ".": "./dist/index.js",
+    "./pipe": "./dist/functional/pipe.js",
+    "./tap": "./dist/functional/tap.js",
+    "./sleep": "./dist/promises/sleep.js"
   },
   "scripts": {
     "build": "tsc",
