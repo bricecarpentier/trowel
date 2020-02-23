@@ -12,6 +12,7 @@
     "./sleep": "./promises/sleep.js"
   },
   "scripts": {
+    "build": "tsc",
     "test": "jest"
   },
   "devDependencies": {
@@ -49,5 +50,8 @@
     "plugins": [
       "transform-default-import"
     ]
+  },
+  "dependencies": {
+    "typescript": "^3.8.2"
   }
 }
