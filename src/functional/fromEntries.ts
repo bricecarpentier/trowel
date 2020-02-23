@@ -1,4 +1,4 @@
-const fromEntries = (items: [string, any][]): object =>
+const fromEntries = (items: [string, unknown][]): object =>
   items ? Object.fromEntries(items) : {};
 
 export default fromEntries;
