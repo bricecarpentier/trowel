@@ -1,6 +1,6 @@
 {
   "name": "@softwaregardeners/trowel",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "description": "Small javascript library with a light focus on functional programming",
   "author": "Brice Carpentier <brice@daknet.org>",
   "license": "MIT",
@@ -53,13 +53,19 @@
   "lint-staged": {
     "*.(js|ts)": "eslint --cache --fix"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "jest": {
     "transform": {
       "^.+\\.(t|j)sx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
