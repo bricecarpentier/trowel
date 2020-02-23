@@ -1,31 +1,49 @@
 {
   "name": "@softwaregardeners/trowel",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "Small javascript library with a light focus on functional programming",
   "author": "Brice Carpentier <brice@daknet.org>",
   "license": "MIT",
   "type": "module",
   "exports": {
-    ".": "./index.js",
-    "./pipe": "./functional/pipe.js",
-    "./tap": "./functional/tap.js",
-    "./sleep": "./promises/sleep.js"
+    ".": "./dist/index.js",
+    "./pipe": "./dist/functional/pipe.js",
+    "./tap": "./dist/functional/tap.js",
+    "./sleep": "./dist/promises/sleep.js"
   },
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "dist/functional/entries.js",
+    "dist/functional/entries.d.ts",
+    "dist/functional/fromEntries.js",
+    "dist/functional/fromEntries.d.ts",
+    "dist/functional/pipe.js",
+    "dist/functional/pipe.d.ts",
+    "dist/functional/tap.js",
+    "dist/functional/tap.d.ts",
+    "dist/promises/sleep.js",
+    "dist/promises/sleep.d.ts"
+  ],
   "scripts": {
-    "test": "jest"
+    "build": "tsc",
+    "lint": "eslint \"src/**\"",
+    "test": "jest src/"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "babel-jest": "^25.1.0",
-    "babel-plugin-transform-default-import": "^1.0.0",
+    "@types/jest": "^25.1.3",
+    "@types/node": "^13.7.4",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "husky": ">=4",
     "jest": "^25.1.0",
     "lint-staged": ">=10",
-    "prettier": "1.19.1"
+    "prettier": "1.19.1",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.2"
   },
   "husky": {
     "hooks": {
@@ -33,21 +51,15 @@
     }
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.(js|ts)": "eslint --cache --fix"
   },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ],
-    "plugins": [
-      "transform-default-import"
-    ]
+  "dependencies": {
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(t|j)sx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
   }
 }
