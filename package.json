@@ -12,18 +12,18 @@
     "./sleep": "./dist/promises/sleep.js"
   },
   "files": [
-    "dist/index.js",
-    "dist/index.d.ts",
-    "dist/functional/entries.js",
-    "dist/functional/entries.d.ts",
-    "dist/functional/fromEntries.js",
-    "dist/functional/fromEntries.d.ts",
-    "dist/functional/pipe.js",
-    "dist/functional/pipe.d.ts",
-    "dist/functional/tap.js",
-    "dist/functional/tap.d.ts",
-    "dist/promises/sleep.js",
-    "dist/promises/sleep.d.ts"
+    "./dist/index.js",
+    "./dist/index.d.ts",
+    "./dist/functional/entries.js",
+    "./dist/functional/entries.d.ts",
+    "./dist/functional/fromEntries.js",
+    "./dist/functional/fromEntries.d.ts",
+    "./dist/functional/pipe.js",
+    "./dist/functional/pipe.d.ts",
+    "./dist/functional/tap.js",
+    "./dist/functional/tap.d.ts",
+    "./dist/promises/sleep.js",
+    "./dist/promises/sleep.d.ts"
   ],
   "scripts": {
     "build": "tsc",
