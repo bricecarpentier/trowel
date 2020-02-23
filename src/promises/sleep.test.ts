@@ -2,7 +2,7 @@ import sleep from "./sleep";
 
 describe("sleep", () => {
   test("returns a promise", () => {
-    expect(sleep()).toBeInstanceOf(Promise);
+    expect(sleep(20)).toBeInstanceOf(Promise);
   });
 
   test("resolves", async () => {
