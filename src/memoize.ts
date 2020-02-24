@@ -2,6 +2,7 @@
 
 /**
  * Caches the result of any function that only accepts one parameter
+ * @param fn the function to memoize
  */
 const memoize = (fn: (arg: any) => any): Function => {
   const memoized = (arg: any): any => {
