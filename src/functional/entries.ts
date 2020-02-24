@@ -1,4 +1,4 @@
-const entries = (obj: object): [string, unknown][] =>
+const entries = (obj?: object | null): [string, unknown][] =>
   obj ? Object.entries(obj) : [];
 
 export default entries;

@@ -1,16 +1,16 @@
-import sleep from "./sleep";
+import sleep from './sleep';
 
-describe("sleep", () => {
-  test("returns a promise", () => {
+describe('sleep', () => {
+  test('returns a promise', () => {
     expect(sleep(20)).toBeInstanceOf(Promise);
   });
 
-  test("resolves", async () => {
+  test('resolves', async () => {
     await sleep(20);
     expect(true);
   });
 
-  test("sleeps the right amount of time", async () => {
+  test('sleeps the right amount of time', async () => {
     const sleepTime = 20;
     const beginning = Date.now();
     await sleep(sleepTime);
