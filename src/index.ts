@@ -1,3 +1,3 @@
-export { default as pipe } from './functional/pipe.js';
-export { default as tap } from './functional/tap.js';
-export { default as sleep } from './promises/sleep.js';
+export { default as pipe } from './pipe.js';
+export { default as tap } from './tap.js';
+export { default as sleep } from './sleep.js';
